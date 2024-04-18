@@ -1,12 +1,18 @@
-import { CheckCircle, House, Folder, PlusSquare, Note, SignOut } from "@phosphor-icons/react";
+import { CheckCircle, House, Folder, PlusSquare, Note, SignOut, X } from "@phosphor-icons/react";
 
 import { Container, Footer, Nav, Title, Header, Button } from "./styles";
 
-export function SideMenu() {
+export function SideMenu({ menuIsOpen, onCloseMenu }) {
   return (
-    <Container>
+    <Container data-menu-is-open={menuIsOpen}>
       <Header>
         <Title><CheckCircle /> e-Tasks</Title>
+        {
+          menuIsOpen && 
+          <Button onClick={onCloseMenu}>
+            <X />
+          </Button>
+        }
       </Header>
 
       <Nav>
@@ -17,10 +23,10 @@ export function SideMenu() {
       </Nav>
 
       <Footer>
-        <img src="https://github.com/rodrigorgtic.png" alt="Foto do usuário" />
+        <img src="https://github.com/jaullmann.png" alt="Foto do usuário" />
         <div>
-          <strong>Rodrigo Gonçalves</strong>
-          <small>rodrigo@email.com</small>
+          <strong>Jorge Ullmann</strong>
+          <small>jorge@email.com</small>
         </div>
 
         <Button type="button">

@@ -12,7 +12,16 @@ export const Container = styled.aside`
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
     grid-area: none;
-    display: none;
+    position: absolute;
+    z-index: 1;
+
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    
+    // regra se aplica abaixo ao container se o atributo for verdadeiro
+    &[data-menu-is-open="true"] {
+      transform: translateX(0);
+    }
   }
 `;
 
@@ -85,5 +94,6 @@ export const Button = styled.button`
     font-size: 20px;
     color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
+  
 `;
 

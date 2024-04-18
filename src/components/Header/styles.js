@@ -15,6 +15,12 @@ export const Container = styled.header`
   > h1 {
     font-size: 2rem;
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    > h1 {
+      font-size: 1.5rem;
+    }    
+  }
 `;
 
 export const Menu = styled.button`
@@ -25,6 +31,12 @@ export const Menu = styled.button`
   > svg {
     font-size: 2.5rem;
     color: ${({ theme }) => theme.COLORS.BLUE_200};
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    > svg {
+      font-size: 2rem;
+    }
   }
   
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
