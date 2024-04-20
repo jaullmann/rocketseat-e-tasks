@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import DEVICE_BREAKPOINTS from '../../styles/deviceBreakpoints';
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints.js';
+
 
 export const Container = styled.button`
   background-color: ${({ theme }) => theme.COLORS.BLUE_300};
